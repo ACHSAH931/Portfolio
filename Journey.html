@@ -1,0 +1,241 @@
+<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" 
+content="width=device-width, initial-scale=1" /> <title>Journey / Story - Achsah J. Bethala</title> 
+<style> :root { --wine: #722f37; --maroon: #800000; --forest-green: #2c5d3f; --deep-water-blue: #094d69; 
+--gold: #c5a400; --ivory: #f6f1eb; --champagne: #f7e7ce; --white: #ffffff; --dark-bg: #111111; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--ivory);
+  color: var(--wine);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: var(--deep-water-blue);
+  color: var(--champagne);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+
+nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: default;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+
+h2.section-title {
+  font-size: 2.5rem;
+  color: var(--deep-water-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.story-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  background: rgba(198, 145, 8, 0.1);
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 3rem 0;
+  padding-left: 30px;
+  border-left: 3px solid var(--gold);
+}
+
+/* Timeline events */
+.timeline-event {
+  position: relative;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.timeline-event:nth-child(odd) {
+  animation-delay: 0.8s;
+}
+.timeline-event:nth-child(even) {
+  animation-delay: 1.1s;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--forest-green);
+  background-color: var(--ivory);
+  box-shadow: 0 0 6px var(--forest-green);
+}
+
+.event-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--maroon);
+  cursor: default;
+  transition: color 0.3s ease;
+  margin-bottom: 0.3rem;
+}
+
+.event-title:hover {
+  color: var(--gold);
+}
+
+.event-date {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--deep-water-blue);
+  margin-bottom: 0.7rem;
+}
+
+.event-details {
+  font-size: 1rem;
+  background: rgba(198, 145, 8, 0.05);
+  padding: 0.8rem 1rem;
+  border-radius: 7px;
+  line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  h2.section-title {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  .timeline {
+    margin-left: 0;
+    padding-left: 15px;
+    border-left-width: 2px;
+  }
+  .timeline-event::before {
+    left: -12px;
+    width: 11px;
+    height: 11px;
+    border-width: 2px;
+  }
+}
+
+
+</style> </head> <body> <nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav> <main> <h2 class="section-title">My Journey</h2> 
+    <p class="story-intro">From curiosity to purpose — my journey has been one of constant exploration, learning, and transformation. I’ve always believed that knowledge should not just inform, but also heal, protect, and empower.
+Over the years, I’ve learned to weave science and technology together to create meaningful impact — and this pursuit continues to shape who I am today.</p>
+
+
+<div class="timeline">
+  <div class="timeline-event">
+    <h3 class="event-title">Origin & Early Interests</h3>
+    <div class="event-date">2010 - 2018</div>
+    <p class="event-details">Even as a student, I was deeply fascinated by how data could reveal hidden patterns in life itself. My curiosity began with biology — understanding the complexity of living systems — and soon grew into a desire to decode it through technology.
+This blend of curiosity and logic drew me to bioinformatics, where science meets computation to uncover the unseen. It marked the beginning of my lifelong fascination with merging biological insight and digital innovation.</p>
+  </div>
+
+  <div class="timeline-event">
+    <h3 class="event-title">Higher Education & Skill Development</h3>
+    <div class="event-date">2019 - 2025</div>
+    <p class="event-details">Pursuing my Bachelor’s in Bioinformatics, Data Science, and Statistics provided me with the foundation to understand both the theoretical and practical sides of data-driven science.
+Through projects, research, and coding experience, I developed proficiency in Python, R, and analytical tools for genomic research. My work in breast cancer bioinformatics strengthened not only my technical skills but also my sense of purpose — using data as a tool for discovery and restoration.
+Alongside this, my interest in cybersecurity grew as I realized the importance of safeguarding digital information and scientific data in a world driven by technology.</p>
+  </div>
+
+  <div class="timeline-event">
+    <h3 class="event-title">Professional Experience & Current Vision</h3>
+    <div class="event-date">2025 - Present</div>
+    <p class="event-details">Today, I continue to expand my expertise through independent research, collaborative projects, and continuous learning. I am currently focused on AI-driven medical research and preparing to pursue a Master’s in Cybersecurity, where I aim to bridge scientific integrity with digital safety.
+My vision is to contribute to a world where technology doesn’t just advance intelligence — it preserves truth, privacy, and life itself.</p>
+  </div>
+</div>
+</main> </body> </html>

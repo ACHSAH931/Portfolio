@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact & Connect - Achsah J. Bethala</title>
+<style>
+  :root {
+    --wine: #722f37;
+    --maroon: #800000;
+    --forest-green: #2c5d3f;
+    --deep-water-blue: #094d69;
+    --gold: #c5a400;
+    --ivory: #f6f1eb;
+    --champagne: #f7e7ce;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--ivory);
+    color: var(--wine);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    background-color: var(--deep-water-blue);
+    color: var(--champagne);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+  nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: default;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    max-width: 700px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  h2.section-title {
+    font-size: 2.5rem;
+    color: var(--deep-water-blue);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem;
+  }
+  p.call-to-action {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--maroon);
+    margin: 1rem 0 3rem;
+  }
+  .contact-info {
+    margin-bottom: 3rem;
+  }
+  .contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .social-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover {
+    color: var(--maroon);
+  }
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form label {
+    align-self: flex-start;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--champagne);
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+  }
+  form button {
+    background-color: var(--gold);
+    color: var(--deep-water-blue);
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  form button:hover {
+    background-color: var(--maroon);
+    color: var(--champagne);
+  }
+  .qr-section {
+    margin-top: 3rem;
+  }
+  .qr-placeholder {
+    margin: 1rem auto 0;
+    width: 160px;
+    height: 160px;
+    border: 4px solid var(--gold);
+    border-radius: 20px;
+    background: var(--champagne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--deep-water-blue);
+    user-select: none;
+  }
+  .thank-you {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--forest-green);
+  }
+  @media (max-width: 600px) {
+    h2.section-title {
+      font-size: 2rem;
+    }
+    form input, form textarea {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <h2 class="section-title">Get in Touch</h2>
+  <p class="call-to-action">Let’s build something awesome together! Feel free to reach out.</p>
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:bethalaachsah@gmail.com">bethalaachsah@gmail.com</a></p>
+    <p><strong>Phone:</strong> +91 8464008484</p>
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </div>
+
+  <form class="contact-form" action="mailto:your.email@example.com" method="post" enctype="text/plain">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="qr-section">
+    <h3>Share the QR to visit my portfolio:</h3>
+    <div class="qr-placeholder">QR Code + Logo Here</div>
+    <p class="thank-you">Thanks for visiting!</p>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects & Research - Achsah J. Bethala</title>
+<style>
+  :root {
+    --wine: #722f37;
+    --maroon: #800000;
+    --forest-green: #2c5d3f;
+    --deep-water-blue: #094d69;
+    --gold: #c5a400;
+    --ivory: #f6f1eb;
+    --champagne: #f7e7ce;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--ivory);
+    color: var(--wine);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    background-color: var(--deep-water-blue);
+    color: var(--champagne);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+  nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: default;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  h2.section-title {
+    font-size: 2.5rem;
+    color: var(--deep-water-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  .project-card {
+    background: rgba(198, 145, 8, 0.08);
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .project-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 0.6rem;
+  }
+  .project-role {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--maroon);
+    margin-bottom: 0.8rem;
+  }
+  .project-description {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .project-tools {
+    font-size: 0.95rem;
+    color: var(--deep-water-blue);
+    margin-bottom: 1rem;
+  }
+  .project-links a {
+    text-decoration: none;
+    color: var(--gold);
+    font-weight: 600;
+    margin-right: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  .project-links a:hover {
+    color: var(--maroon);
+  }
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 600px) {
+    h2.section-title {
+      font-size: 2rem;
+    }
+    .project-card {
+      padding: 1rem 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2 class="section-title">Projects & Research</h2>
+
+  <div class="project-card" style="animation-delay: 0.3s;">
+    <div class="project-title">Genomic Data Analysis of Breast Cancer</div>
+    <div class="project-role">Role: Lead Data Analyst</div>
+    <p class="project-description"> Study of gene expressions and mutation patterns using R and Python.</p>
+    <div class="project-tools">Tools: R, Python, Bioconductor, ggplot2</div>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">Live Demo</a>
+    </div>
+  </div>
+
+  <div class="project-card" style="animation-delay: 0.6s;">
+    <div class="project-title">Molecular Docking for Drug Discovery</div>
+    <div class="project-role">Role: Research Assistant</div>
+    <p class="project-description"> Using AutoDock Vina for screening natural compounds.</p>
+    <div class="project-tools">Tools: AutoDock Vina, PyMOL, Python</div>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">Research Paper</a>
+    </div>
+  </div>
+
+  <div class="project-card" style="animation-delay: 0.9s;">
+    <div class="project-title">AI-Powered Cybersecurity Threat Detection</div>
+    <div class="project-role">Role: Developer</div>
+    <p class="project-description"> Developing machine learning models to detect anomalous network activity.</p>
+    <div class="project-tools">Tools: Python, Scikit-learn, TensorFlow, Network Simulators</div>
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">Presentation</a>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

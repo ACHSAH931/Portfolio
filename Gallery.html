@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery - Achsah J. Bethala</title>
+<style>
+  :root {
+    --wine: #722f37;
+    --maroon: #800000;
+    --forest-green: #2c5d3f;
+    --deep-water-blue: #094d69;
+    --gold: #c5a400;
+    --ivory: #f6f1eb;
+    --champagne: #f7e7ce;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--ivory);
+    color: var(--wine);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    background-color: var(--deep-water-blue);
+    color: var(--champagne);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+  nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: default;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  h2.section-title {
+    font-size: 2.5rem;
+    color: var(--deep-water-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 1.5rem;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.3);
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(114, 47, 55, 0.7);
+    color: var(--champagne);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width:600px) {
+    h2.section-title {
+      font-size: 2rem;
+    }
+    .gallery-item img {
+      height: 140px;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item" style="animation-delay: 0.3s;">
+      <img src="placeholder1.jpg" alt="Project Photo 1" />
+      <div class="gallery-caption">Project Photo 1</div>
+    </div>
+    <div class="gallery-item" style="animation-delay: 0.5s;">
+      <img src="placeholder2.jpg" alt="Lab Work" />
+      <div class="gallery-caption">Lab Work</div>
+    </div>
+    <div class="gallery-item" style="animation-delay: 0.7s;">
+      <img src="placeholder3.jpg" alt="Speaking Event" />
+      <div class="gallery-caption">Speaking Event</div>
+    </div>
+    <div class="gallery-item" style="animation-delay: 0.9s;">
+      <img src="placeholder4.jpg" alt="Aesthetic Shot" />
+      <div class="gallery-caption">Aesthetic Shot</div>
+    </div>
+    <!-- Add more gallery items as needed -->
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achsah J. Bethala - Portfolio</title>
+  <style>
+    /* Color palette */
+    :root {
+      --wine: #722f37;
+      --maroon: #800000;
+      --forest-green: #2c5d3f;
+      --deep-water-blue: #094d69;
+      --gold: #c5a400;
+      --ivory: #f6f1eb;
+      --champagne: #f7e7ce;
+      --white: #ffffff;
+      --dark-bg: #111111;
+    }
+
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: var(--ivory);
+      color: var(--wine);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: var(--deep-water-blue);
+      color: var(--champagne);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: default;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* Landing Section */
+    .landing {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--deep-water-blue), var(--forest-green));
+      color: var(--ivory);
+      text-align: center;
+      min-height: 85vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .landing h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+
+    .landing p.tagline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--champagne);
+      animation: fadeInUp 1s 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .landing .intro-placeholder {
+      max-width: 500px;
+      font-size: 1.1rem;
+      background: rgba(255 255 255 / 0.1);
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-style: italic;
+      animation: fadeIn 1s 1s ease forwards;
+      opacity: 0;
+    }
+
+    /* Illustration Placeholder */
+    .illustration-placeholder {
+      width: 250px;
+      height: 250px;
+      border: 3px dashed var(--gold);
+      border-radius: 50%;
+      margin: 2rem auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .landing h1 {
+        font-size: 2.2rem;
+      }
+      .landing p.tagline {
+        font-size: 1.1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+  <section class="landing" id="home">
+    <h1>Achsah J. Bethala</h1>
+    <p class="tagline">Exploring the bridge between Biology, Data, and Cybersecurity.</p>
+    <div class="intro-placeholder">Let's take look through my life</div>
+    <div class="illustration-placeholder"></div>
+  </section>
+
+</body>
+</html>

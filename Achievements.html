@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Achievements & Certifications - Achsah J. Bethala</title>
+<style>
+  :root {
+    --wine: #722f37;
+    --maroon: #800000;
+    --forest-green: #2c5d3f;
+    --deep-water-blue: #094d69;
+    --gold: #c5a400;
+    --ivory: #f6f1eb;
+    --champagne: #f7e7ce;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--ivory);
+    color: var(--wine);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    background-color: var(--deep-water-blue);
+    color: var(--champagne);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+  nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: default;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  h2.section-title {
+    font-size: 2.5rem;
+    color: var(--deep-water-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+  }
+  .achievement-card {
+    background: rgba(198, 145, 8, 0.07);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+  .achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  }
+  .badge {
+    width: 80px;
+    height: 80px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--deep-water-blue);
+    user-select: none;
+  }
+  .achievement-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--maroon);
+  }
+  .achievement-date {
+    font-style: italic;
+    margin-bottom: 0.6rem;
+    color: var(--deep-water-blue);
+  }
+  .achievement-desc {
+    font-size: 1rem;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 600px) {
+    h2.section-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h2 class="section-title">Achievements & Certifications</h2>
+  <div class="achievements-grid">
+    <div class="achievement-card" style="animation-delay: 0.3s;">
+      <div class="badge">1</div>
+      <div class="achievement-title">Best Research Paper</div>
+      <div class="achievement-date">2023</div>
+      <div class="achievement-desc">Published a paper on bioinformatics applications in breast cancer diagnosis.</div>
+    </div>
+    <div class="achievement-card" style="animation-delay: 0.6s;">
+      <div class="badge">2</div>
+      <div class="achievement-title">Hackathon Winner</div>
+      <div class="achievement-date">2022</div>
+      <div class="achievement-desc">Won the university cybersecurity challenge with a novel threat detection algorithm.</div>
+    </div>
+    <div class="achievement-card" style="animation-delay: 0.9s;">
+      <div class="badge">3</div>
+      <div class="achievement-title">Certified Data Scientist</div>
+      <div class="achievement-date">2024</div>
+      <div class="achievement-desc">Completed professional certification in data science & analytics.</div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

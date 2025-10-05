@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Testimonials & Recommendations - Achsah J. Bethala</title>
+<style>
+  :root {
+    --wine: #722f37;
+    --maroon: #800000;
+    --forest-green: #2c5d3f;
+    --deep-water-blue: #094d69;
+    --gold: #c5a400;
+    --ivory: #f6f1eb;
+    --champagne: #f7e7ce;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--ivory);
+    color: var(--wine);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    background-color: var(--deep-water-blue);
+    color: var(--champagne);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+  color: var(--champagne); /* or your preferred color */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+    }
+  nav ul li a:hover {
+  color: var(--gold); /* elegant hover color */
+  text-decoration: none;
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: default;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  h2.section-title {
+    font-size: 2.5rem;
+    color: var(--deep-water-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  .testimonial-card {
+    flex: 0 0 80%;
+    background: rgba(198, 145, 8, 0.07);
+    border-radius: 15px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0 1rem;
+    color: var(--wine);
+  }
+  .testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+  }
+  .testimonial-author {
+    font-weight: 700;
+    color: var(--maroon);
+  }
+  .testimonial-role {
+    font-size: 0.9rem;
+    color: var(--deep-water-blue);
+  }
+  .carousel-buttons {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .carousel-btn {
+    background-color: var(--gold);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    color: var(--deep-water-blue);
+    margin: 0 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+  }
+  .carousel-btn:hover {
+    background-color: var(--maroon);
+    color: var(--champagne);
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @media (max-width: 600px) {
+    h2.section-title {
+      font-size: 2rem;
+    }
+    .testimonial-card {
+      padding: 1.5rem 1.8rem;
+      flex: 0 0 90%;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AJB</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Education.html">Education</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Achievements.html">Achievements</a></li>
+    <li><a href="Insights.html">Insights</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Testimony.html">Testimonials</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <h2 class="section-title">Testimonials & Recommendations</h2>
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="testimonial-card" style="animation-delay: 0.3s;">
+        <p class="testimonial-text">"Achsah's passion for bioinformatics and her analytical skills made a significant impact on our research team."</p>
+        <div class="testimonial-author">Dr. Emily Carter</div>
+        <div class="testimonial-role">Research Mentor</div>
+      </div>
+      <div class="testimonial-card" style="animation-delay: 0.6s;">
+        <p class="testimonial-text">"Her dedication and creativity in cybersecurity projects were exceptional."</p>
+        <div class="testimonial-author">Mr. Rajesh Patel</div>
+        <div class="testimonial-role">Project Supervisor</div>
+      </div>
+      <div class="testimonial-card" style="animation-delay: 0.9s;">
+        <p class="testimonial-text">"Achsah is a brilliant, hardworking individual who excels in interdisciplinary work."</p>
+        <div class="testimonial-author">Prof. Susan Lee</div>
+        <div class="testimonial-role">Academic Advisor</div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-buttons">
+    <button class="carousel-btn" onclick="prevSlide()">Prev</button>
+    <button class="carousel-btn" onclick="nextSlide()">Next</button>
+  </div>
+</main>
+
+<script>
+  const track = document.getElementById('carouselTrack');
+  const cards = track.children;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth + 32; // card width + margin
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateCarousel();
+  }
+
+  window.addEventListener('resize', updateCarousel);
+
+  // Initialize
+  window.onload = () => {
+    updateCarousel();
+  };
+</script>
+</body>
+</html>
